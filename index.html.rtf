@@ -1,0 +1,527 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2822
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\margl1440\margr1440\vieww30040\viewh16180\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 <!DOCTYPE html>\
+<html lang="en">\
+<head>\
+    <meta charset="UTF-8">\
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">\
+    <title>Dharmik Patel - Software Developer</title>\
+    <style>\
+        * \{\
+            margin: 0;\
+            padding: 0;\
+            box-sizing: border-box;\
+        \}\
+\
+        body \{\
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;\
+            background: #0a0a0a;\
+            color: #ffffff;\
+            line-height: 1.6;\
+        \}\
+\
+        /* Navigation */\
+        nav \{\
+            position: fixed;\
+            top: 0;\
+            width: 100%;\
+            padding: 1rem 2rem;\
+            background: rgba(10, 10, 10, 0.95);\
+            backdrop-filter: blur(10px);\
+            z-index: 100;\
+        \}\
+\
+        nav ul \{\
+            list-style: none;\
+            display: flex;\
+            justify-content: center;\
+            gap: 2rem;\
+        \}\
+\
+        nav a \{\
+            color: #ffffff;\
+            text-decoration: none;\
+            font-weight: 500;\
+            transition: color 0.3s ease;\
+        \}\
+\
+        nav a:hover \{\
+            color: #00d4ff;\
+        \}\
+\
+        /* Hero Section */\
+        .hero \{\
+            height: 100vh;\
+            display: flex;\
+            align-items: center;\
+            justify-content: center;\
+            text-align: center;\
+            background: radial-gradient(circle at center, #1a1a2e 0%, #0a0a0a 100%);\
+        \}\
+\
+        .hero h1 \{\
+            font-size: clamp(2.5rem, 6vw, 4rem);\
+            font-weight: 700;\
+            margin-bottom: 1rem;\
+            background: linear-gradient(135deg, #00d4ff, #7b68ee);\
+            -webkit-background-clip: text;\
+            -webkit-text-fill-color: transparent;\
+        \}\
+\
+        .hero p \{\
+            font-size: 1.3rem;\
+            margin-bottom: 2rem;\
+            color: #cccccc;\
+        \}\
+\
+        .btn \{\
+            display: inline-block;\
+            padding: 0.8rem 2rem;\
+            background: linear-gradient(135deg, #00d4ff, #7b68ee);\
+            color: white;\
+            text-decoration: none;\
+            border-radius: 30px;\
+            font-weight: 600;\
+            transition: transform 0.3s ease;\
+        \}\
+\
+        .btn:hover \{\
+            transform: translateY(-2px);\
+        \}\
+\
+        /* Sections */\
+        section \{\
+            padding: 4rem 2rem;\
+            max-width: 1100px;\
+            margin: 0 auto;\
+        \}\
+\
+        .section-title \{\
+            font-size: 2.5rem;\
+            text-align: center;\
+            margin-bottom: 2rem;\
+            background: linear-gradient(135deg, #00d4ff, #7b68ee);\
+            -webkit-background-clip: text;\
+            -webkit-text-fill-color: transparent;\
+        \}\
+\
+        /* About */\
+        .about-content \{\
+            display: grid;\
+            grid-template-columns: 1fr;\
+            gap: 2rem;\
+            text-align: center;\
+        \}\
+\
+        .about-text \{\
+            font-size: 1.1rem;\
+            color: #cccccc;\
+            max-width: 700px;\
+            margin: 0 auto;\
+        \}\
+\
+        .stats \{\
+            display: grid;\
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));\
+            gap: 2rem;\
+            margin-top: 2rem;\
+        \}\
+\
+        .stat \{\
+            padding: 1.5rem;\
+            background: rgba(255, 255, 255, 0.05);\
+            border-radius: 10px;\
+            text-align: center;\
+            border: 1px solid rgba(255, 255, 255, 0.1);\
+        \}\
+\
+        .stat h3 \{\
+            font-size: 2rem;\
+            color: #00d4ff;\
+            margin-bottom: 0.5rem;\
+        \}\
+\
+        /* Skills */\
+        .skills-grid \{\
+            display: grid;\
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));\
+            gap: 2rem;\
+        \}\
+\
+        .skill-category \{\
+            background: rgba(255, 255, 255, 0.05);\
+            padding: 2rem;\
+            border-radius: 15px;\
+            border: 1px solid rgba(255, 255, 255, 0.1);\
+        \}\
+\
+        .skill-category h3 \{\
+            color: #00d4ff;\
+            margin-bottom: 1rem;\
+            font-size: 1.3rem;\
+        \}\
+\
+        .skill-tags \{\
+            display: flex;\
+            flex-wrap: wrap;\
+            gap: 0.5rem;\
+        \}\
+\
+        .skill-tag \{\
+            background: rgba(0, 212, 255, 0.2);\
+            padding: 0.4rem 0.8rem;\
+            border-radius: 20px;\
+            font-size: 0.85rem;\
+            border: 1px solid rgba(0, 212, 255, 0.3);\
+        \}\
+\
+        /* Projects */\
+        .projects-grid \{\
+            display: grid;\
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));\
+            gap: 2rem;\
+        \}\
+\
+        .project-card \{\
+            background: rgba(255, 255, 255, 0.05);\
+            border-radius: 15px;\
+            padding: 2rem;\
+            border: 1px solid rgba(255, 255, 255, 0.1);\
+            border-top: 3px solid #00d4ff;\
+        \}\
+\
+        .project-card h3 \{\
+            color: #00d4ff;\
+            font-size: 1.4rem;\
+            margin-bottom: 1rem;\
+        \}\
+\
+        .project-card p \{\
+            color: #cccccc;\
+            margin-bottom: 1rem;\
+            line-height: 1.5;\
+        \}\
+\
+        .project-tech \{\
+            display: flex;\
+            flex-wrap: wrap;\
+            gap: 0.4rem;\
+            margin: 1rem 0;\
+        \}\
+\
+        .tech-tag \{\
+            background: rgba(123, 104, 238, 0.3);\
+            padding: 0.2rem 0.6rem;\
+            border-radius: 12px;\
+            font-size: 0.8rem;\
+            border: 1px solid rgba(123, 104, 238, 0.5);\
+        \}\
+\
+        .project-links \{\
+            display: flex;\
+            gap: 1rem;\
+            margin-top: 1.5rem;\
+        \}\
+\
+        .project-link \{\
+            padding: 0.5rem 1rem;\
+            background: linear-gradient(135deg, #00d4ff, #7b68ee);\
+            color: white;\
+            text-decoration: none;\
+            border-radius: 20px;\
+            font-size: 0.85rem;\
+            transition: transform 0.3s ease;\
+        \}\
+\
+        .project-link:hover \{\
+            transform: scale(1.05);\
+        \}\
+\
+        /* Contact */\
+        .contact-content \{\
+            text-align: center;\
+            max-width: 600px;\
+            margin: 0 auto;\
+        \}\
+\
+        .contact-content p \{\
+            color: #cccccc;\
+            margin-bottom: 2rem;\
+            font-size: 1.1rem;\
+        \}\
+\
+        .contact-links \{\
+            display: flex;\
+            justify-content: center;\
+            gap: 1.5rem;\
+            flex-wrap: wrap;\
+        \}\
+\
+        .contact-link \{\
+            display: flex;\
+            align-items: center;\
+            gap: 0.5rem;\
+            padding: 0.8rem 1.5rem;\
+            background: rgba(255, 255, 255, 0.05);\
+            border: 1px solid rgba(255, 255, 255, 0.1);\
+            border-radius: 30px;\
+            color: white;\
+            text-decoration: none;\
+            transition: all 0.3s ease;\
+        \}\
+\
+        .contact-link:hover \{\
+            background: rgba(0, 212, 255, 0.2);\
+            transform: translateY(-2px);\
+        \}\
+\
+        /* Footer */\
+        footer \{\
+            text-align: center;\
+            padding: 2rem;\
+            background: rgba(255, 255, 255, 0.05);\
+            border-top: 1px solid rgba(255, 255, 255, 0.1);\
+            color: #cccccc;\
+        \}\
+\
+        /* Responsive */\
+        @media (max-width: 768px) \{\
+            .hero h1 \{ font-size: 2.5rem; \}\
+            .hero p \{ font-size: 1.1rem; \}\
+            .stats \{ grid-template-columns: 1fr; \}\
+            .projects-grid \{ grid-template-columns: 1fr; \}\
+            .skills-grid \{ grid-template-columns: 1fr; \}\
+            .contact-links \{ flex-direction: column; align-items: center; \}\
+            nav ul \{ flex-wrap: wrap; gap: 1rem; \}\
+        \}\
+    </style>\
+</head>\
+<body>\
+    <nav>\
+        <ul>\
+            <li><a href="#home">Home</a></li>\
+            <li><a href="#about">About</a></li>\
+            <li><a href="#skills">Skills</a></li>\
+            <li><a href="#projects">Projects</a></li>\
+            <li><a href="#contact">Contact</a></li>\
+        </ul>\
+    </nav>\
+\
+    <section id="home" class="hero">\
+        <div>\
+            <h1>Dharmik Patel</h1>\
+            <p>Full-Stack Software Developer & Problem Solver</p>\
+            <a href="#about" class="btn">View My Work</a>\
+        </div>\
+    </section>\
+\
+    <section id="about">\
+        <h2 class="section-title">About Me</h2>\
+        <div class="about-content">\
+            <div class="about-text">\
+                <p>I'm a passionate Computer Science student at the University of Illinois Chicago with hands-on experience in full-stack development. I specialize in building scalable web applications using modern technologies and have successfully delivered projects that impact thousands of users.</p>\
+                <br>\
+                <p>My expertise spans across frontend frameworks like React and backend technologies including Node.js, Python, and databases. I thrive in collaborative environments and enjoy solving complex problems through clean, efficient code.</p>\
+            </div>\
+            \
+            <div class="stats">\
+                <div class="stat">\
+                    <h3>15+</h3>\
+                    <p>Projects Completed</p>\
+                </div>\
+                <div class="stat">\
+                    <h3>3+</h3>\
+                    <p>Years Experience</p>\
+                </div>\
+                <div class="stat">\
+                    <h3>2500+</h3>\
+                    <p>Users Served</p>\
+                </div>\
+                <div class="stat">\
+                    <h3>95%</h3>\
+                    <p>Success Rate</p>\
+                </div>\
+            </div>\
+        </div>\
+    </section>\
+\
+    <section id="skills">\
+        <h2 class="section-title">Technical Skills</h2>\
+        <div class="skills-grid">\
+            <div class="skill-category">\
+                <h3>Frontend Development</h3>\
+                <div class="skill-tags">\
+                    <span class="skill-tag">React.js</span>\
+                    <span class="skill-tag">Next.js</span>\
+                    <span class="skill-tag">TypeScript</span>\
+                    <span class="skill-tag">JavaScript</span>\
+                    <span class="skill-tag">HTML5</span>\
+                    <span class="skill-tag">CSS3</span>\
+                </div>\
+            </div>\
+            \
+            <div class="skill-category">\
+                <h3>Backend Development</h3>\
+                <div class="skill-tags">\
+                    <span class="skill-tag">Node.js</span>\
+                    <span class="skill-tag">Express.js</span>\
+                    <span class="skill-tag">Python</span>\
+                    <span class="skill-tag">Flask</span>\
+                    <span class="skill-tag">C#</span>\
+                    <span class="skill-tag">.NET</span>\
+                    <span class="skill-tag">Java</span>\
+                </div>\
+            </div>\
+            \
+            <div class="skill-category">\
+                <h3>Database & Cloud</h3>\
+                <div class="skill-tags">\
+                    <span class="skill-tag">MySQL</span>\
+                    <span class="skill-tag">PostgreSQL</span>\
+                    <span class="skill-tag">MongoDB</span>\
+                    <span class="skill-tag">AWS</span>\
+                    <span class="skill-tag">Docker</span>\
+                    <span class="skill-tag">Git</span>\
+                </div>\
+            </div>\
+            \
+            <div class="skill-category">\
+                <h3>Tools & Methods</h3>\
+                <div class="skill-tags">\
+                    <span class="skill-tag">Agile/Scrum</span>\
+                    <span class="skill-tag">CI/CD</span>\
+                    <span class="skill-tag">Jest</span>\
+                    <span class="skill-tag">Postman</span>\
+                    <span class="skill-tag">VS Code</span>\
+                    <span class="skill-tag">Jira</span>\
+                </div>\
+            </div>\
+        </div>\
+    </section>\
+\
+    <section id="projects">\
+        <h2 class="section-title">Featured Projects</h2>\
+        <div class="projects-grid">\
+            <div class="project-card">\
+                <h3>FinTracker Pro</h3>\
+                <p>Comprehensive personal finance management system with real-time expense tracking, bank integration, and analytics dashboard serving 1,200+ users.</p>\
+                <div class="project-tech">\
+                    <span class="tech-tag">React.js</span>\
+                    <span class="tech-tag">Node.js</span>\
+                    <span class="tech-tag">PostgreSQL</span>\
+                    <span class="tech-tag">AWS</span>\
+                </div>\
+                <div class="project-links">\
+                    <a href="https://github.com/dpatel246" class="project-link">GitHub</a>\
+                    <a href="#" class="project-link">Live Demo</a>\
+                </div>\
+            </div>\
+            \
+            <div class="project-card">\
+                <h3>EcoMart Platform</h3>\
+                <p>Full-stack e-commerce platform for sustainable products with secure payments, inventory management, and mobile-responsive design.</p>\
+                <div class="project-tech">\
+                    <span class="tech-tag">Next.js</span>\
+                    <span class="tech-tag">Express.js</span>\
+                    <span class="tech-tag">MongoDB</span>\
+                    <span class="tech-tag">Stripe</span>\
+                </div>\
+                <div class="project-links">\
+                    <a href="https://github.com/dpatel246" class="project-link">GitHub</a>\
+                    <a href="#" class="project-link">Live Demo</a>\
+                </div>\
+            </div>\
+            \
+            <div class="project-card">\
+                <h3>SmartStudy AI</h3>\
+                <p>AI-powered learning assistant that generates personalized quizzes and study materials, deployed on AWS serving 300+ students.</p>\
+                <div class="project-tech">\
+                    <span class="tech-tag">Python</span>\
+                    <span class="tech-tag">Flask</span>\
+                    <span class="tech-tag">OpenAI API</span>\
+                    <span class="tech-tag">Docker</span>\
+                </div>\
+                <div class="project-links">\
+                    <a href="https://github.com/dpatel246" class="project-link">GitHub</a>\
+                    <a href="#" class="project-link">Live Demo</a>\
+                </div>\
+            </div>\
+            \
+            <div class="project-card">\
+                <h3>CryptoTracker</h3>\
+                <p>Real-time cryptocurrency portfolio manager with price tracking, analytics, and interactive charts for investment management.</p>\
+                <div class="project-tech">\
+                    <span class="tech-tag">C#</span>\
+                    <span class="tech-tag">.NET</span>\
+                    <span class="tech-tag">SQL Server</span>\
+                    <span class="tech-tag">Chart.js</span>\
+                </div>\
+                <div class="project-links">\
+                    <a href="https://github.com/dpatel246" class="project-link">GitHub</a>\
+                    <a href="#" class="project-link">Live Demo</a>\
+                </div>\
+            </div>\
+        </div>\
+    </section>\
+\
+    <section id="contact">\
+        <h2 class="section-title">Let's Connect</h2>\
+        <div class="contact-content">\
+            <p>I'm always interested in new opportunities and collaborations. Let's discuss how we can work together!</p>\
+            \
+            <div class="contact-links">\
+                <a href="mailto:dharmikpatel9357@gmail.com" class="contact-link">\
+                    \uc0\u55357 \u56551  Email\
+                </a>\
+                <a href="https://www.linkedin.com/in/dharmikpatell/" class="contact-link">\
+                    \uc0\u55357 \u56508  LinkedIn\
+                </a>\
+                <a href="https://github.com/dpatel246" class="contact-link">\
+                    \uc0\u55357 \u56599  GitHub\
+                </a>\
+                <a href="tel:224-343-9357" class="contact-link">\
+                    \uc0\u55357 \u56561  Phone\
+                </a>\
+            </div>\
+        </div>\
+    </section>\
+\
+    <footer>\
+        <p>&copy; 2025 Dharmik Patel. Built with passion and code.</p>\
+    </footer>\
+\
+    <script>\
+        // Smooth scrolling for navigation\
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => \{\
+            anchor.addEventListener('click', function (e) \{\
+                e.preventDefault();\
+                const targetId = this.getAttribute('href');\
+                const target = document.querySelector(targetId);\
+                if (target) \{\
+                    const offsetTop = target.offsetTop - 70; // Account for fixed nav\
+                    window.scrollTo(\{\
+                        top: offsetTop,\
+                        behavior: 'smooth'\
+                    \});\
+                \}\
+            \});\
+        \});\
+\
+        // Simple scroll effect for navigation\
+        window.addEventListener('scroll', () => \{\
+            const nav = document.querySelector('nav');\
+            if (window.scrollY > 50) \{\
+                nav.style.background = 'rgba(10, 10, 10, 0.98)';\
+            \} else \{\
+                nav.style.background = 'rgba(10, 10, 10, 0.95)';\
+            \}\
+        \});\
+    </script>\
+</body>\
+</html>\
+}
